@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{311D06B5-773A-48E4-989C-899843081F83}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Qc_Lab</RootNamespace>
+    <AssemblyName>Qc_Lab</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2021.1.119.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>lib\RCWF\2021.1.119.40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2021.1.119.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2021.1.119.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>lib\RCWF\2021.1.119.40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2021.1.119.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>lib\RCWF\2021.1.119.40\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Device\frm_AddOrEditDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Device\frm_AddOrEditDevice.Designer.cs">
+      <DependentUpon>frm_AddOrEditDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Device\frm_Device.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Device\frm_Device.Designer.cs">
+      <DependentUpon>frm_Device.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Test\frm_DeviceTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Test\frm_DeviceTest.Designer.cs">
+      <DependentUpon>frm_DeviceTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Test\frm_SaveTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Test\frm_SaveTest.Designer.cs">
+      <DependentUpon>frm_SaveTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Test\frm_Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Test\frm_Test.Designer.cs">
+      <DependentUpon>frm_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\frm_AddOrEditRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\frm_AddOrEditRole.Designer.cs">
+      <DependentUpon>frm_AddOrEditRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\frm_AddOrEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\frm_AddOrEditUser.Designer.cs">
+      <DependentUpon>frm_AddOrEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\frm_Rols.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\frm_Rols.Designer.cs">
+      <DependentUpon>frm_Rols.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\frm_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\frm_User.Designer.cs">
+      <DependentUpon>frm_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Interfaces\ITestServices.cs" />
+    <Compile Include="Services\Interfaces\IUserServices.cs" />
+    <Compile Include="Services\TestServices.cs" />
+    <Compile Include="Services\UserServices.cs" />
+    <Compile Include="Utilities\StaticParametr.cs" />
+    <Compile Include="Utilities\DateConvertor.cs" />
+    <Compile Include="Utilities\PasswordHelper.cs" />
+    <Compile Include="Validator\BaseValidator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Validator\BaseValidator.designer.cs">
+      <DependentUpon>BaseValidator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validator\CustomValidator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Validator\CustomValidator.designer.cs">
+      <DependentUpon>CustomValidator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validator\RangeValidator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Validator\RangeValidator.designer.cs">
+      <DependentUpon>RangeValidator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validator\RegularExpressionValidator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Validator\RegularExpressionValidator.designer.cs">
+      <DependentUpon>RegularExpressionValidator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validator\RequiredFieldValidator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Validator\RequiredFieldValidator.designer.cs">
+      <DependentUpon>RequiredFieldValidator.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Device\frm_AddOrEditDevice.resx">
+      <DependentUpon>frm_AddOrEditDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Device\frm_Device.resx">
+      <DependentUpon>frm_Device.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Test\frm_DeviceTest.resx">
+      <DependentUpon>frm_DeviceTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Test\frm_SaveTest.resx">
+      <DependentUpon>frm_SaveTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Test\frm_Test.resx">
+      <DependentUpon>frm_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\frm_AddOrEditRole.resx">
+      <DependentUpon>frm_AddOrEditRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\frm_AddOrEditUser.resx">
+      <DependentUpon>frm_AddOrEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\frm_Rols.resx">
+      <DependentUpon>frm_Rols.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\frm_User.resx">
+      <DependentUpon>frm_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="img\access.png" />
+    <Content Include="img\add %282%29.png" />
+    <Content Include="img\blurred-bg-3.jpg" />
+    <Content Include="img\download %281%29.png" />
+    <Content Include="img\keys.png" />
+    <Content Include="img\labratory.png" />
+    <Content Include="img\page_bg_blur03.jpg" />
+    <Content Include="img\remove %282%29.png" />
+    <Content Include="img\report.png" />
+    <Content Include="img\SVG\1370791030_credit-card.png" />
+    <Content Include="img\SVG\1371475930_filenew.png" />
+    <Content Include="img\SVG\1371475973_document_edit.png" />
+    <Content Include="img\SVG\1371476007_Close_Box_Red.png" />
+    <Content Include="img\SVG\1371476049_fork3.png" />
+    <Content Include="img\SVG\1371476070_self1.png" />
+    <Content Include="img\SVG\1371476120_fingerprint_reader.png" />
+    <Content Include="img\SVG\1371476143_deliverables.png" />
+    <Content Include="img\SVG\1371476193_printers-&amp;-Faxes.png" />
+    <Content Include="img\SVG\1371476276_Print.png" />
+    <Content Include="img\SVG\1371476342_Refresh.png" />
+    <Content Include="img\SVG\1371476368_Synchronize.png" />
+    <Content Include="img\SVG\1371476394_refresh red.png" />
+    <Content Include="img\SVG\1371476468_preferences-contact-list.png" />
+    <Content Include="img\SVG\1371476499_todo-list.png" />
+    <Content Include="img\SVG\add.png" />
+    <Content Include="img\SVG\boss %281%29.png" />
+    <Content Include="img\SVG\boss.png" />
+    <Content Include="img\SVG\edit.png" />
+    <Content Include="img\SVG\enter.png" />
+    <Content Include="img\SVG\list2.png" />
+    <Content Include="img\SVG\remove %281%29.png" />
+    <Content Include="img\SVG\remove.png" />
+    <Content Include="img\SVG\servicesCosts.png" />
+    <Content Include="img\SVG\testing24px.png" />
+    <Content Include="img\SVG\testing32px.png" />
+    <Content Include="img\SVG\testing48px.png" />
+    <Content Include="img\SVG\Users.png" />
+    <Content Include="img\Test.png" />
+    <Content Include="img\Users.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
